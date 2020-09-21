@@ -1,0 +1,53 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+
+<body class="container" style="background-image: url(flashcards.png);">
+    <div style="text-align: center;margin: 0; padding: 0;">
+        <h2 style="display: inline-block;padding: 20px;" id="email">Hi </h2>
+        <button style="display: inline-block; margin-bottom: 20px;" class="btn btn-alert" onclick="signout()">Sign
+            Out</button>
+        <button style="display: inline-block; margin-bottom: 20px;" class="btn btn-danger" onclick="navigatetoscores()"
+            style="margin-right: 15px;">View all
+            Scores</button><br/>
+    </div>
+    
+    <center>
+        <div class="info">
+            <p>Select a Category to Start Playin</p>
+            <img src="play.jpg"/>
+        </div><br/>
+    </center>
+    <div class="d-inline">
+        <div class="d-flex justify-content-center">
+            <button type="button" onclick="validateClick(this)" class="btn btn-primary" style="width: 200px;"
+                name="Hollywood">Hollywood</button>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <button type="button" onclick="validateClick(this)" class="btn btn-secondary" style="width: 200px; background-color:#f15b88"
+                name="Bollywood">Bands</button>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <button type="button" onclick="validateClick(this)" class="btn btn-success" style="width: 200px;"
+                name="Kollywood">Singers</button>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <button type="button" onclick="validateClick(this)" class="btn btn-warning" style="width: 200px;"
+                name="Tollywood">Super Heroes</button>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <button type="button" onclick="validateClick(this)" class="btn btn-info" style="width: 200px;"
+                name="Random">Random</button>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+        <script type="text/javascript" src="HandleHome.js"></script>
+</body>

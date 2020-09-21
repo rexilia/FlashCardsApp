@@ -1,0 +1,90 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./HandleCardPage.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <h2 class="nav navbar-nav" id="username" style="color: aliceblue;">User:</h2>
+            <h2 class="nav navbar-nav navbar-right" id="score" style="color: aliceblue;display: none;">0: Score</h2>
+        </div>
+    </nav>
+    <div id="startGame" class="container-fluid">
+        <center><button onclick="startGame()" class="btn btn-primary">Start</button></center>
+        
+    </div>
+    <center>
+        <div id="restartGame" style="display: none;" class="container-fluid">
+            <button class="btn btn-primary" onclick="navigatetohome()" style="margin-right: 15px;">Home</button>
+            <button class="btn btn-danger" onclick="startGame()" style="margin-right: 15px;"> Play Again</button>
+            <button class="btn btn-warning" onclick="navigatetoscores()" style="margin-right: 15px;">View all
+                Scores</button>
+            <h1 id="displayScore" style="color: aliceblue;">
+                Score:
+            </h1>
+        </div>
+    </center>
+    <center>
+        
+        <section class="question-card" >
+            <div class="container" id="question-card" style="display: none;">
+                <div class="question-single">
+                    <div class="content-area">
+                        <div class="side-one">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <div class="img-area">
+                                        <img src="" alt="Hello" id="image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-two">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <ol type="A">
+                                        <li style="margin-left: 10px; color: black; font-size: medium;"><button class="btn btn-primary" id="option1" style="width: 250px;"
+                                                onclick="validateanswer(this)">Option 1</button></li><br>
+                                        <li style="margin-left: 10px; color: black; font-size: medium;" ><button class="btn btn-danger" id="option2" style="width: 250px;"
+                                                onclick="validateanswer(this)">Option 2</button></li><br>
+                                        <li style="margin-left: 10px; color: black;font-size: medium;"><button class="btn btn-warning" id="option3" style="width: 250px;"
+                                                onclick="validateanswer(this)">Option 3</button></li><br>
+                                        <li style="margin-left: 10px; color: black;font-size: medium; "><button class="btn btn-success" id="option4" style="width: 250px;"
+                                                onclick="validateanswer(this)">Option 4</button></li><br>
+                                    </ol>
+                                    <!--<ul>
+                                        <li><button class="btn btn-primary" id="option1" style="width: 250px;"
+                                                onclick="validateanswer(this)">Option 1</button></li>
+
+                                        <li><button class="btn btn-danger" id="option2" style="width: 250px;"
+                                                onclick="validateanswer(this)">Option 2</button></li>
+
+                                        <li><button class="btn btn-warning" id="option3" style="width: 250px;"
+                                                onclick="validateanswer(this)">Option 3</button></li>
+
+                                        <li><button class="btn btn-success" id="option4" style="width: 250px;"
+                                                onclick="validateanswer(this)">Option 4</button></li>
+                                    </ul>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </center>
+    
+    <div id="snackbar">Some text some message..</div>
+
+    </body>
+</body>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script type="text/javascript" src="./HandleCardPage.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
